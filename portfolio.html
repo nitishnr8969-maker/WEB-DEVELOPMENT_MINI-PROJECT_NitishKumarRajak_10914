@@ -1,0 +1,303 @@
+< !DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nitish Kumar Rajak | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    :root {
+      --bg-dark: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      --bg-light: linear-gradient(135deg, #fdfbfb, #ebedee);
+      --text-dark: #ffffff;
+      --text-light: #000000;
+      --accent: #00ffd5;
+      --card-dark: rgba(255,255,255,0.1);
+      --card-light: rgba(0,0,0,0.08);
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      scroll-behavior: smooth;
+    }
+
+    body.light {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+    }
+
+    /* THEME TOGGLE */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      z-index: 999;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+    }
+
+    .hero-text span {
+      color: var(--accent);
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background: var(--accent);
+      color: #000;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-right: 10px;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    .hero-img img {
+      width: 280px;
+      border-radius: 50%;
+      box-shadow: 0 0 40px rgba(0,255,213,0.6);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    /* GLASS CARD */
+    .glass {
+      background: var(--card-dark);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    body.light .glass {
+      background: var(--card-light);
+    }
+
+    /* SKILLS */
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .progress {
+      width: 100%;
+      height: 12px;
+      background: #888;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress div {
+      height: 100%;
+      width: 0;
+      background: var(--accent);
+      transition: 1.5s;
+    }
+
+    /* PROJECTS */
+    .academic {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      padding: 20px;
+      border-radius: 20px;
+      background: var(--card-dark);
+    }
+
+    body.light .project-card {
+      background: var(--card-light);
+    }
+
+    /* CONTACT */
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .social a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- THEME BUTTON -->
+  <div class="theme-toggle" id="toggleTheme">🌙 Dark</div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Nitish kumar <span>Rajak</span></h1>
+      <h3>B.Tech CSE (Core) Student</h3>
+      <p>Aspiring Software Engineer | Passionate About Technology & Innovation</p>
+      <a href="#academic" class="btn">View Projects</a>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+    <div class="hero-img">
+      <img src="C:\Users\nitish kumar rajak\Downloads\image nitish.jpeg" alt="Nitish kumar Rajak ">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About Me</h2>
+    <div class="glass">
+      I am Nitish kumar Rajak , a first-year Bachelor of Technology student in
+        Computer Science & Engineering (Core) at Rungta International Skills University.
+        I am passionate about technology, problem-solving, and continuous learning.
+        My goal is to build a strong foundation in computer science and grow into a
+        skilled and responsible professional.
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skill"><span>HTML</span><div class="progress"><div data-width="85%"></div></div></div>
+    <div class="skill"><span>CSS</span><div class="progress"><div data-width="80%"></div></div></div>
+    <div class="skill"><span>JavaScript</span><div class="progress"><div data-width="75%"></div></div></div>
+    <div class="skill"><span>Basic Programming</span><div class="progress"><div data-width="70%"></div></div></div>
+    <div class="skill"><span>Problem Solving</span><div class="progress"><div data-width="65%"></div></div></div>    
+    <div class="skill"><span>Computer Fundamentals</span><div class="progress"><div data-width="60%"></div></div></div>    
+    <div class="skill"><span>Communication</span><div class="progress"><div data-width="55%"></div></div></div>    
+    <div class="skill"><span>Teamwork</span><div class="progress"><div data-width="50%"></div></div></div>        
+    <div class="skill"><span>Time Management</span><div class="progress"><div data-width="45%"></div></div></div>     
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="academic">
+    <h2>Academic</h2>
+    <ul>
+        <li><strong>ERP:</strong> RU-25-10914</li>
+        <li><strong>Course:</strong> Bachelor of Technology</li>
+        <li><strong>Branch:</strong> CSE Core</li>
+        <li><strong>Year:</strong> 1st</li>
+        <li><strong>Semester:</strong> 1st</li>
+        <li><strong>College:</strong> Rungta International Skills University</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button class="btn">Send</button>
+    </form>
+
+    <div class="social">
+      <a href="https://www.linkedin.com/in/nitish-kumar-rajak-39b700383?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/nitishnr8969-maker" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/mr_nitish_kumar_0100" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Nitish Kumar Rajak
+  </footer>
+
+  <script>
+    // Skill animation
+    const bars = document.querySelectorAll('.progress div');
+    window.addEventListener('scroll', () => {
+      bars.forEach(bar => {
+        if (bar.getBoundingClientRect().top < window.innerHeight) {
+          bar.style.width = bar.dataset.width;
+        }
+      });
+    });
+
+    // Theme toggle
+    const toggleBtn = document.getElementById('toggleTheme');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light');
+      toggleBtn.textContent = '🌞 Light';
+    }
+
+    toggleBtn.onclick = () => {
+      body.classList.toggle('light');
+      if (body.classList.contains('light')) {
+        toggleBtn.textContent = '🌞 Light';
+        localStorage.setItem('theme', 'light');
+      } else {
+        toggleBtn.textContent = '🌙 Dark';
+        localStorage.setItem('theme', 'dark');
+      }
+    };
+  </script>
+
+</body>
+</html>
